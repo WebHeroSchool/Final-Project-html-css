@@ -1,0 +1,22 @@
+
+@font-face {
+    font-family: 'montserratbold';
+    src: url('loco-fonts/montserrat-bold-webfont.woff') format('woff'),
+         url('loco-fonts/montserrat-bold-webfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'montserratmedium';
+    src: url('loco-fonts/montserrat-medium-webfont.woff') format('woff'),
+         url('loco-fonts/montserrat-medium-webfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'montserratregular';
+    src: url('loco-fonts/montserrat-regular-webfont.woff') format('woff'),
+         url('loco-fonts/montserrat-regular-webfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
