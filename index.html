@@ -6,25 +6,25 @@
   </head>
   <body>
     <main class="new-collection">
-      <header>
+      <header class="header">
         <div class="logo">LOCO</div>
         <div class="switch">
-          <select class="button-lang_option">
-            <option value="RU">RU</option>
-            <option value="ENG">ENG</option>
+          <select class="switch__button">
+            <option class="switch__lang-option" value="RU">RU</option>
+            <option class="switch__lang-option" value="ENG">ENG</option>
           </select>
         </div>
         <div class="burger-menu">
-          <input type="checkbox" id="menu__toggle">
-          <label class="menu__btn" for="menu__toggle">
+          <input type="checkbox" id="burger-menu__toggle">
+          <label class="burger-menu__btn" for="burger-menu__toggle">
             <span></span>
           </label>
-          <div class="menu__box">
-            <ul class="list">
-              <li><a class="menu__item" href="#">Главная</a></li>
-              <li><a class="menu__item" href="#">Новая коллекция</a></li>
-              <li><a class="menu__item" href="#">Личный кабинет</a></li>
-              <li><a class="menu__item" href="#">Помощь</a></li>
+          <div class="menu-box">
+            <ul class="menu-box__list">
+              <li><a class="menu-box__item" href="#">Главная</a></li>
+              <li><a class="menu-box__item" href="#">Новая коллекция</a></li>
+              <li><a class="menu-box__item" href="#">Личный кабинет</a></li>
+              <li><a class="menu-box__item" href="#">Помощь</a></li>
             </ul>
           </div>
         </div>
@@ -32,13 +32,13 @@
       <section class="main">
         <h1 class="main__title">Новая<br>коллекция</h1>
         <p class="main__subtitle">Бесплатная доставка включена. Предложение действует на сайте loco.com и в магазинах до 18.09.2018. Для получения скидки в магазинах предъявите скриншот данного предложения. В магазинах предложение не суммируется с другими акциями, предложениями и распродажей.</p>
-        <div class="button">
-          <a class="button-read" href="#">ЧИТАТЬ ДАЛЬШЕ</a>
-          <a class="button-other" href="#">ДРУГИЕ ПРЕДЛОЖЕНИЯ<span></span></a>
+        <div class="main__button">
+          <a class="main__button_read" href="#">ЧИТАТЬ ДАЛЬШЕ</a>
+          <a class="main__button_other" href="#">ДРУГИЕ ПРЕДЛОЖЕНИЯ<span></span></a>
         </div>
       </section>
       <div class="image-main">
-        <img class="image-new-collection" src="loco-img/main.png" alt="new-collection"/>
+        <img class="image-main__new-collection" src="loco-img/main.png" alt="new-collection"/>
       </div>
       <footer class="footer">
         <img class="footer__img" src="loco-img/inst.svg" alt="instagram"/>
@@ -60,18 +60,18 @@
           <div class="color-price__circle color-price__circle_color_blue"></div>
           <div class="color-price__circle color-price__circle_color_green"></div>
           1990₽</div>
-        <div class="quantity">
-          <button class="button-quantity" type="button"></button>
+        <div class="quantity">                                                       <--! 1111-->
+          <button class="quantity__button" type="button"></button>
         </div>
         <a class="description-clutch__button-basket" href="#">ДОБАВИТЬ В КОРЗИНУ</a>
       </div>
-      <div class="clutch__button">
-        <a class="clutch__button-products" href="#">ДРУГИЕ ТОВАРЫ НА LOCO.COM</a>
+      <div class="clutch-button">
+        <a class="clutch-button__products" href="#">ДРУГИЕ ТОВАРЫ НА LOCO.COM</a>
         <span></span>
       </div>
       <div class="image-clutch">
-        <img class="image-clutch-pink" src="loco-img/clutch-pink.png" alt="pink clutch"/>
-        <img class="image-clutch-gray" src="loco-img/clutch-gray.png" alt="gray clutch"/>
+        <img class="image-clutch__pink" src="loco-img/clutch-pink.png" alt="pink clutch"/>
+        <img class="image-clutch__gray" src="loco-img/clutch-gray.png" alt="gray clutch"/>
       </div>
     </section>
     <section class="clothes">
@@ -81,16 +81,16 @@
         <p class="description-clothes__subtitle">осенняя коллекция</p>
         <p class="description-clothes__text">Джиннсы, свитер, обувь.<br>В комплект также входит пакет ароматного чая и кружка.</p>
         <div class="quantity">
-          <button class="button-quantity" type="button"></button>
+          <button class="quantity__button" type="button"></button>
         </div>
         <a class="description-clothes__button-basket" href="#">ДОБАВИТЬ В КОРЗИНУ</a>
       </div>
-      <div class="clothes__button">
-        <a class="clothes__button-products" href="#">ДРУГИЕ ТОВАРЫ НА LOCO.COM</a>
+      <div class="clothes-button">
+        <a class="clothes-button__products" href="#">ДРУГИЕ ТОВАРЫ НА LOCO.COM</a>
         <span></span>
       </div>
-      <div class="clothes__img">
-        <img class="clothes__img-clothes" src="loco-img/clothes.png" alt="clothes"/>
+      <div class="clothes-img">
+        <img class="clothes-img__clothes" src="loco-img/clothes.png" alt="clothes"/>
       </div>
     </section>
   </body>
