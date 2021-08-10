@@ -1,12 +1,686 @@
+body{
+  margin: 0;
+}
+
+.new-collection{
+  display: flex;
+  height: 100vh;
+  background: no-repeat url('loco-img/black5.svg');
+}
+
 .logo{
+  display: inline-block;
+  position: relative;
+  top: 38px;
+  left: 52px;
   font: 500 30px/36px montserratmedium, arial, helvetica, sans-serif;
+  letter-spacing: 2px;
+  color: #fff;
 }
+
+.switch{
+  display: inline-block;
+  position: absolute;
+  left: 385px;
+  top: 43px;
+}
+
 .switch__button{
+  width: 56px;
   font: 500 20px/24px montserratmedium, arial, helvetica, sans-serif;
+  color: #fff;
+  background: #000;
+  border: none;
 }
+
+#burger-menu__toggle{
+  display: none;
+}
+
+.burger-menu__btn{
+  position: fixed;
+  display: flex;
+  top: 0;
+  right: 0;
+  width: 98px;
+  height: 92px;
+  background: #ededed;
+  z-index: 1;
+}
+
+.burger-menu__btn:hover{
+  cursor: pointer;
+}
+
+.burger-menu__btn > span,
+.burger-menu__btn > span::after{
+  position: absolute;
+  top: 45%;
+  right: 29%;
+  transform: translateY(-50%);
+  width: 35px;
+  height: 3px;
+  background: #000;
+}
+
+.burger-menu__btn > span::after{
+  display: block;
+  content: '';
+  top: 9px;
+  transform: translateX(10px);
+}
+
+.menu-box{
+  position: fixed;
+  visibility: hidden;
+  display: block;
+  text-align: center;
+  margin: 0;
+  top: 0;
+  right: 0;
+  width: 180px;
+  height: 400px;
+  background: #ededed;
+  box-shadow: 0 20px 20px -10px rgb(44,44,44,0.2);
+}
+
+.menu-box__list{
+  margin: 100px 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.menu-box__item{
+  display: inline-block;
+  margin-bottom: 15px;
+  font: 500 16px/16px Montserrat, aria, helvetica, sans-serif;
+  list-style: none;
+  text-decoration: none;
+  color: #000;
+}
+
+.menu-box__item:hover{
+  opacity: .6;
+}
+
+#burger-menu__toggle:checked ~.burger-menu__btn > span{
+  transform: rotate(45deg);
+}
+
+#burger-menu__toggle:checked ~.burger-menu__btn > span::after{
+  transform: rotate(90deg);
+  top: 0;
+  right: 0;
+}
+
+#burger-menu__toggle:checked ~.menu-box{
+  visibility: visible;
+  right: 0;
+}
+
+.image-main{
+  position: relative;
+  top: 19%;
+  height: 10%;
+}
+
+.image-main__new-collection{
+  position: relative;
+  left: 16%;
+}
+
+.main{
+  position: relative;
+  top: 271px;
+  left: 143px;
+  width: 32%;
+}
+
 .main__title{
-  font: bold 80px/81px montserratbold, arial, helvetica, sans-serif;
+  margin: 0;
+  margin-bottom: 21px;
+  font: bold 80px/81px Montserrat, arial, helvetica, sans-serif;
 }
+
 .main__subtitle{
-  font: 400 15px/21px montserratregular, arial, helvetica, sans-serif;
+  margin: 0;
+  margin-bottom: 39px;
+  font: 400 15px/21px Montserrat, arial, helvetica, sans-serif;
+}
+
+.main-button{
+  display: flex;
+  position: relative;
+  width: 106%;
+}
+
+.main-button__read{
+  margin-right: 54px;
+  padding: 12px 40px 12px 37px;
+  border: 1px solid #000;
+  font: 500 13px Montserrat, aria, helvetica, sans-serif;
+  text-decoration: none;
+  color: #000;
+}
+
+.main-button__other{
+  padding-top: 12px;
+  font: 500 13px Montserrat, aria, helvetica, sans-serif;
+  text-decoration: none;
+  color: #000;
+}
+
+.main-button__other > span,
+.main-button__other > span::after,
+.main-button__other > span::before{
+  position: absolute;
+  display: block;
+  top: 48%;
+  right: 0;
+  height: 1px;
+  background: #000;
+}
+
+.main-button__other > span{
+  width: 42px;
+}
+
+.main-button__other > span::after,
+.main-button__other > span::before{
+  content: '';
+  width: 7px;
+}
+
+.main-button__other > span::after{
+  transform: rotate(45deg) translateY(-4px);
+}
+
+.main-button__other > span::before{
+  transform: rotate(-45deg) translateY(3px);
+}
+
+.footer{
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 37px;
+}
+.footer__img:first-child{
+  padding-left: 52px;
+}
+.footer__img{
+  padding-right: 8px;
+}
+.scroll{
+  position: absolute;
+  left: 49%;
+  bottom: 0;
+  margin-bottom: 39px;
+  width: 24px;
+  height: 42px;
+  border: solid 1px #000;
+  border-radius: 15px;
+}
+.scroll > span{
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  width: 1px;
+  height: 8px;
+  background: #000;
+}
+
+.clutch{
+  position: relative;
+  background: #fae8e4;
+  height: 100vh;
+}
+.image-clutch{
+  position: relative;
+  width: 50%;
+}
+.image-clutch__gray{
+  position: absolute;
+  padding-top: 30%;
+  left: 19%
+}
+.image-clutch__gray:hover{
+  transform: scale(1.2);
+  transition: 1s;
+  z-index: 2;
+}
+.image-clutch__pink{
+  position: absolute;
+  padding-top: 4%;
+  left: 32%;
+  z-index: 1;
+}
+.description-clutch{
+  position: relative;
+  padding: 12px 59px 44px 55px;
+  top: 168px;
+  left: 61%;
+  width: 26%;
+  background: #fff;
+  box-shadow: 0 50px 30px -15px rgb(182,169,166,0.3), 30px 50px 30px -20px rgb(182,169,166,0.3);
+}
+.description-clutch__title{
+  margin-bottom: 14px;
+  font: bold 40px/40px Montserrat, aria, helvetica, sans-serif;
+}
+.description-clutch__subtitle{
+  margin: 0;
+  margin-bottom: 64px;
+  font: bold 16px/16px Montserrat, aria, helvetica, sans-serif;
+  letter-spacing: 1px;
+  opacity: .5;
+}
+.description-clutch__text{
+  margin-bottom: 39px;
+  font: 400 15px/21px Montserrat, aria, helvetica, sans-serif;
+  opacity: .5;
+}
+.color-price{
+  display: flex;
+  align-items: center;
+  margin-bottom: 47px;
+  font: bold 40px/56px Montserrat, aria, helvetica, sans-serif;
+}
+.color-price__circle{
+  margin-right: 15px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.color-price__circle_color_gray{
+  margin-left: 0;
+  background: #dedede;
+}
+.color-price__circle_color_pink{
+  background: #f29f9f;
+}
+.color-price__circle_color_blue{
+  background: #a8bff9;
+}
+.color-price__circle_color_green{
+  margin-right: 69px;
+  background: #90bd8f;
+}
+.color-price__circle:hover{
+  transform: scale(1.3);
+  transition: 1s;
+  cursor: pointer;
+}
+
+.description-clutch__button-basket{
+  position: absolute;
+  display: inline-block;
+  padding: 14px 47px 12px 41px;
+  border: 1px solid #000;
+  font: 500 13px Montserrat, aria, helvetica, sans-serif;
+  text-decoration: none;
+  color: #000;
+}
+.clutch-button{
+  position: absolute;
+  width: 33%;
+  right: 82px;
+  bottom: 13%;
+}
+.clutch-button__products{
+  margin-right: 10px;
+  font: 500 13px/15px Montserrat, aria, helvetica, sans-serif;
+  text-decoration: none;
+  color: #000;
+}
+
+.clutch-button__products > span,
+.clutch-button__products > span::after,
+.clutch-button__products > span::before{
+  position: absolute;
+  display: block;
+  top: 41%;
+  right: 0;
+  height: 1px;
+  background: #000;
+}
+
+.clutch-button__products > span{
+  width: 240px;
+}
+
+.clutch-button__products > span::after,
+.clutch-button__products > span::before{
+  content: '';
+  width: 7px;
+}
+
+.clutch-button__products > span::after{
+  transform: rotate(45deg) translateY(-4px);
+}
+
+.clutch-button__products > span::before{
+  transform: rotate(-45deg) translateY(3px);
+}
+
+.clothes{
+  display: flex;
+  background: #ebe3d8;
+  height: 100vh;
+}
+
+.band{
+  position: absolute;
+  left: 27%;
+  width: 5%;
+  height: 100vh;
+  background: #000;
+  z-index: 1;
+}
+
+.description-clothes{
+  position: relative;
+  margin-top: 255px;
+  padding: 40px 50px 40px 47px;
+  right: 10px;
+  width: 42%;
+  height: 272px;
+  background: #fae8e4;
+  z-index: 3;
+}
+
+.description-clothes__title{
+  margin: 0;
+  margin-bottom: 15px;
+  font: bold 40px/40px Montserrat, aria, helvetica, sans-serif;
+}
+
+.description-clothes__subtitle{
+  margin: 0 0 33px;
+  font: bold 16px/16px Montserrat, aria, helvetica, sans-serif;
+  letter-spacing: 1px;
+  opacity: .5;
+}
+
+.description-clothes__text{
+  margin: 0 0 55px;
+  padding-right: 10px;
+  padding-left: 3px;
+  font: 400 15px/21px Montserrat, aria, helvetica, sans-serif;
+  opacity: .5;
+}
+
+.quantity_inner {
+    display: inline-flex;
+    margin-right: 17px;
+    border: 1px solid #000;
+}
+.quantity_inner .bt_minus,
+.quantity_inner .bt_plus,
+.quantity_inner .quantity {
+    height: 42px;
+    width: 32px;
+    padding: 0;
+    border: 0;
+    font: 500 15px Montserrat, aria, helvetica, sans-serif;
+    background: transparent;
+    cursor: pointer;
+    outline: 0;
+}
+.quantity_inner .quantity {
+    text-align: center;
+    color: #000;
+}
+.quantity_inner .bt_minus svg,
+.quantity_inner .bt_plus svg {
+    stroke: #000;
+    stroke-width: 1;
+    transition: 0.5s;
+    margin: 10px;
+}
+
+.description-clothes__button-basket{
+  position: absolute;
+  padding: 14px 47px 12px 41px;
+  font: 500 13px Montserrat, aria, helvetica, sans-serif;
+  text-decoration: none;
+  color: #000;
+  border: 1px solid #000;
+}
+
+.clothes-button{
+  position: relative;
+  right: 5%;
+}
+
+.clothes-button__products{
+  font: 500 13px/15px Montserrat, aria, helvetica, sans-serif;
+  text-decoration: none;
+  color: #000;
+}
+
+.clothes-button__products > span,
+.clothes-button__products > span::after,
+.clothes-button__products > span::before{
+  position: absolute;
+  display: block;
+  top: 56%;
+  right: 0;
+  height: 1px;
+  background: #000;
+}
+
+.clothes-button__products > span{
+  width: 42px;
+}
+
+.clothes-button__products > span::after,
+.clothes-button__products > span::before{
+  content: '';
+  width: 7px;
+}
+
+.clothes-button__products > span::after{
+  transform: rotate(45deg) translateY(-4px);
+}
+
+.clothes-button__products > span::before{
+  transform: rotate(-45deg) translateY(3px);
+}
+
+.clothes-img{
+  position: relative;
+}
+
+.clothes-img__clothes{
+  position: relative;
+  padding-top: 17%;
+  left: 11%;
+  z-index: 2;
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 769px) {
+
+  .new-collection{
+    background: no-repeat bottom url('loco-img/main-mobil.png');
+  }
+
+  .image-main__new-collection,
+  .switch,
+  .main__subtitle,
+  .main-button,
+  .footer,
+  .scroll{
+    display: none;
+  }
+
+  .header{
+    width: 100%;
+    height: 21%;
+    background: #fff;
+  }
+
+  .logo{
+    padding: 88px 0 0 26px;
+    left: 0;
+    top: 0;
+    color: #000;
+  }
+
+  .burger-menu__btn{
+    width: 70px;
+    height: 69px;
+  }
+
+  .burger-menu__btn > span,
+  .burger-menu__btn > span::after{
+    width: 26px;
+  }
+
+  .burger-menu__btn > span::after{
+    transform: translateX(8px);
+  }
+
+  .main{
+    position: absolute;
+    top: 76%;
+    left: 7%;
+  }
+
+  .main__title{
+    font: bold 50px/51px Montserrat, arial, helvetica, sans-serif;
+  }
+
+  .arrow{
+    position: absolute;
+    left: 46%;
+    bottom: 0;
+    margin-bottom: 8%;
+  }
+
+  .arrow > span,
+  .arrow > span::after,
+  .arrow > span::before{
+    display: inline-block;
+    position: absolute;
+  }
+
+  .arrow > span::before{
+    transform: rotate(140deg);
+    left: 14px;
+  }
+
+  .arrow > span::after{
+    transform: rotate(40deg);
+  }
+
+  .arrow > span::after,
+  .arrow > span::before{
+    content: '';
+    width: 20px;
+    height: 2px;
+    background: #000;
+  }
+
+  .image-clutch__gray,
+  .image-clutch__pink,
+  .clothes-img__clothes,
+  .quantity_inner,
+  .clutch-button__products{
+    display: none;
+  }
+
+  .clutch{
+    display: flex;
+  }
+
+  .image-clutch{
+    width: 0;
+  }
+
+  .image-clatch__mobil{
+  }
+
+  .description-clutch{
+    padding: 12px 40px 70px 35px;
+    width: 69%;
+  }
+
+  .description-clutch__title{
+    margin: 0 0 5px;
+    font: bold 20px/20px Montserrat, arial, helvetica, sans-serif;
+  }
+
+  .description-clutch__subtitle{
+    margin-bottom: 20px;
+    font: bold 10px/10px Montserrat, arial, helvetica, sans-serif;
+  }
+
+  .description-clutch__text{
+    margin-bottom: 15px;
+    font: 400 9px/12px Montserrat, arial, helvetica, sans-serif;
+  }
+
+  .color-price{
+    margin-bottom: 30px;
+    font: bold 20px/28px Montserrat, arial, helvetica, sans-serif;
+  }
+
+  .color-price__circle{
+    width: 23px;
+    height: 23px;
+  }
+
+  .description-clothes{
+
+  }
+
+  .description-clothes__title{
+    font: bold 20px/20px Montserrat, arial, helvetica, sans-serif;
+  }
+
+  .description-clothes__subtitle{
+    font: bold 10px/10px Montserrat, arial, helvetica, sans-serif;
+  }
+
+  .description-clothes__text{
+    font: 400 9px/12px Montserrat, arial, helvetica, sans-serif;
+  }
+
+  .clothes-img__mobil{
+    position: relative;
+    z-index: 2;
+  }
+
+}
+
+@media (max-width: 350px) {
+
+  .header{
+    height: 11%;
+  }
+
+  .logo{
+    padding: 25px 0 0 30px;
+  }
+
+  .clothes-img__mobil{
+    width: 85%;
+  }
+}
+
+@media (min-width: 769px) {
+
+  .arrow,
+  .image-clatch__mobil,
+  .clothes-img__mobil{
+    display: none;
+  }
 }
