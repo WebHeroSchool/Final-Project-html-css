@@ -45,7 +45,7 @@ body{
   width: 98px;
   height: 92px;
   background: #ededed;
-  z-index: 1;
+  z-index: 2;
 }
 
 .burger-menu__btn:hover{
@@ -82,6 +82,7 @@ body{
   height: 400px;
   background: #ededed;
   box-shadow: 0 20px 20px -10px rgb(44,44,44,0.2);
+  z-index: 1;
 }
 
 .menu-box__list{
@@ -100,7 +101,7 @@ body{
 }
 
 .menu-box__item:hover{
-  opacity: .6;
+  opacity: .5;
 }
 
 #burger-menu__toggle:checked ~.burger-menu__btn > span{
@@ -449,7 +450,7 @@ body{
 
 .clothes-button{
   position: relative;
-  right: 5%;
+  right: 20%;
 }
 
 .clothes-button__products{
@@ -498,17 +499,83 @@ body{
   z-index: 2;
 }
 
+@media (max-width: 1367px) {
 
+  .image-main__new-collection{
+    width: 450px;
+  }
 
+  .main{
+    top: 25%;
+    width: 33%;
+  }
 
+  .main__title{
+    font: bold 70px/70px Montserrat, aria, helvetica, sans-serif;
+  }
 
+  .main-button__read{
+    margin-right: 20px;
+    padding: 10px 30px;
+    font: 500 10px Montserrat, aria, helvetica, sans-serif;
+  }
 
+  .main-button__other{
+    font: 500 10px Montserrat, aria, helvetica, sans-serif;
+  }
 
+  .scroll{
+    left: 55%;
+  }
+}
 
+@media (max-width: 1025px){
+
+  .header{
+    height: 10%;
+  }
+
+  .image-main{
+    top: 25%;
+  }
+
+  .image-main__new-collection{
+    left: 0;
+    width: 300px;
+  }
+
+  .main{
+    top: 200px;
+    width: 40%;
+  }
+
+  .main__title{
+    font: bold 60px/60px Montserrat, aria, helvetica, sans-serif;
+  }
+
+  .scroll{
+    left: 55%;
+  }
+
+  .description-clothes {
+    right: 20%;
+  }
+
+  .main-button__read{
+    padding: 10px 15px;
+  }
+}
+
+@media (max-width: 900px){
+  .scroll{
+    left: 61%;
+  }
+}
 
 @media (max-width: 769px) {
 
   .new-collection{
+    height: 668px;
     background: no-repeat bottom url('loco-img/main-mobil.png');
   }
 
@@ -535,8 +602,13 @@ body{
   }
 
   .burger-menu__btn{
+    top: 70px;
     width: 70px;
     height: 69px;
+  }
+
+  .menu-box{
+    top: 70px;
   }
 
   .burger-menu__btn > span,
@@ -545,13 +617,14 @@ body{
   }
 
   .burger-menu__btn > span::after{
-    transform: translateX(8px);
+    top: 8px;
+    transform: translateX(7px);
   }
 
   .main{
     position: absolute;
-    top: 76%;
-    left: 7%;
+    top: 505px;
+    left: 25%;
   }
 
   .main__title{
@@ -560,9 +633,8 @@ body{
 
   .arrow{
     position: absolute;
+    top: 637px;
     left: 46%;
-    bottom: 0;
-    margin-bottom: 8%;
   }
 
   .arrow > span,
@@ -598,7 +670,7 @@ body{
   }
 
   .clutch{
-    display: flex;
+      display: flex;
   }
 
   .image-clutch{
@@ -610,7 +682,8 @@ body{
 
   .description-clutch{
     padding: 12px 40px 70px 35px;
-    width: 69%;
+    left: 20%;
+    width: 20%;
   }
 
   .description-clutch__title{
@@ -639,7 +712,7 @@ body{
   }
 
   .description-clothes{
-
+    right: 55%;
   }
 
   .description-clothes__title{
@@ -659,20 +732,80 @@ body{
     z-index: 2;
   }
 
+  .clothes-button{
+    right: 80%;
+    height: 10%;
+    top: 65%;
+  }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 450px){
+
+  .burger-menu__btn{
+    left: 81%;
+  }
+
+  .menu-box{
+    left: 55%;
+  }
+
+  .main{
+    left: 7%;
+  }
+}
+
+@media (max-width: 361px) {
 
   .header{
     height: 11%;
   }
 
   .logo{
-    padding: 25px 0 0 30px;
+    padding: 35px 0 0 30px;
+  }
+
+  .burger-menu__btn{
+    top: 15px;
+  }
+
+  .menu-box{
+    top: 15px;
+    left: 48%;
   }
 
   .clothes-img__mobil{
     width: 85%;
+  }
+}
+
+@media (max-width: 317px) {
+
+  .burger-menu__btn{
+    left: 77%;
+  }
+
+  .menu-box{
+    left: 39%;
+  }
+
+  .main__title{
+    font: bold 40px/41px Montserrat, arial, helvetica, sans-serif;
+  }
+}
+
+@media (min-width: 1445px) {
+
+  .image-main{
+    top: 15%;
+  }
+
+  .image-main__new-collection{
+    width: 500px;
+  }
+
+  .main{
+    top: 200px;
+    width: 40%;
   }
 }
 
